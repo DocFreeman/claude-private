@@ -102,7 +102,7 @@ bash make-run.sh
 ## Files
 
 ```
-claude-private-2.1.88.run    Self-extracting installer (ship this one file)
+claude-private-2.1.88.run    Self-extracting installer 
 claude-notelemetry            Patched binary
 claude-private                Wrapper script
 patch_binary.py               Reproducible patching script
