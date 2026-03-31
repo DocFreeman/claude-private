@@ -1,0 +1,19 @@
+#!/bin/bash
+# Claude Code - Private Edition
+# No telemetry, no phone-home.
+#
+# For alternative backends, use claude-code-router externally
+# and set ANTHROPIC_BASE_URL as usual.
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Telemetry kill switches
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+export DISABLE_TELEMETRY=1
+export DISABLE_AUTOUPDATER=1
+export CLAUDE_CODE_ENABLE_TELEMETRY=0
+export OTEL_METRICS_EXPORTER=none
+export OTEL_LOGS_EXPORTER=none
+export OTEL_TRACES_EXPORTER=none
+
+exec "$SCRIPT_DIR/claude-notelemetry" "$@"
