@@ -81,7 +81,7 @@ OTEL_LOGS_EXPORTER=none
 OTEL_TRACES_EXPORTER=none
 ```
 
-Source-level patches across 19 files are documented in `../claude-code/src/` (search for `// MODIFIED:` comments) for auditing purposes.
+Source-level patches across 19 files
 
 ---
 
