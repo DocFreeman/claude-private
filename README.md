@@ -119,6 +119,21 @@ install.sh                    Alternative installer
 - **Some features degraded** — Grove, referrals, team memory sync, and anything depending on remote feature flags won't work. Core functionality (conversations, tools, file editing, bash, MCP) is unaffected.
 
 ---
+### MacOS support
+
+#### Installation
+```brew install node
+npm install -g @anthropic-ai/claude-code
+python3 patch_binary.py $(which claude) ./claude-notelemetry
+```
+
+After patching, run:
+`bash install.sh` 
+To put it in ~/.local/bin/ so you are able to run it from the terminal
+
+
+To run it (recommend LM Studio server (free) with endpoint support: `anthropic-compatible`
+example command: `ANTHROPIC_BASE_URL=http://localhost:1234 claude-private`
 
 ## Based on
 
